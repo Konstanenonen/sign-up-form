@@ -1,75 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Sign-up Form</title>
-</head>
-<body>
-  <div class="root">
-    <div class="picture-area">
-      <div class="logo-area">
-        <img class="logo-image" src="./images/odin-lined.png" alt="God Odin smiling on mortal souls">
-        <h1 class="logo-title">ODIN</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="picture-area">
+        <div class="logo-area">
+          <img
+            class="logo-image"
+            src="./images/odin-lined.png"
+            alt="God Odin smiling on mortal souls"
+          />
+          <h1 class="logo-title">ODIN</h1>
+        </div>
+        <p class="photo-credit">
+          Photo by <span class="underline">Luis Dalvan</span> on
+          <span class="underline">Pexels</span>
+        </p>
       </div>
-      <p class="photo-credit">
-        Photo by <span class="underline">Luis Dalvan</span> on <span class="underline">Pexels</span>
-      </p>
-    </div>
-    <div class="form-area">
-      <div class="headline-area">
-        <div class="info-area">
-          <h2 class="info-text">
-            This is not a real online service! You know you need something like this in your life to help you relize your deepest dreams. Sign up <em>now</em> to get started.
-          </h2>
-          <h2 class="info-text">
-            You <em>know</em> you want to.
-          </h2>
+      <div class="form-area">
+        <div class="headline-area">
+          <div class="info-area">
+            <h2 class="info-text">
+              This is not a real online service! You know you need something
+              like this in your life to help you relize your deepest dreams.
+              Sign up <em>now</em> to get started.
+            </h2>
+            <h2 class="info-text">You <em>know</em> you want to.</h2>
+          </div>
+        </div>
+        <div class="form">
+          <form id="account-form">
+            <h2>Let's do this!</h2>
+            <ul class="input-container">
+              <li class="input-field">
+                <label for="first-name">FIRST NAME</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  required
+                  pattern="[a-zA-Z0-9]+"
+                />
+              </li>
+              <li class="input-field">
+                <label for="last-name">LAST NAME</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  required
+                  pattern="[a-zA-Z0-9]+"
+                />
+              </li>
+              <li class="input-field">
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email" required />
+              </li>
+              <li class="input-field">
+                <label for="phone-number">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  required
+                  pattern="^(?:0|\(?\+358\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+                />
+              </li>
+              <li class="input-field" id="password-field">
+                <label for="password">PASSWORD</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                />
+              </li>
+              <li class="input-field">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  required
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                />
+              </li>
+            </ul>
+            <div class="button-area">
+              <button type="submit" class="create-account-btn">
+                Create Account
+              </button>
+              <p class="login-text">
+                Already have an account? <a class="login-link">Log in</a>
+              </p>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="form">
-        <form id="account-form">
-          <h2>Let's do this!</h2>
-          <ul class="input-container">
-            <li class="input-field">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first-name" id="first-name" required pattern="[a-zA-Z0-9]+">
-            </li>
-            <li class="input-field">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" name="last-name" id="last-name" required pattern="[a-zA-Z0-9]+">
-            </li>
-            <li class="input-field">
-              <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email" required>
-            </li>
-            <li class="input-field">
-              <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" name="phone-number" id="phone-number" required pattern="^(?:0|\(?\+358\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
-            </li>
-            <li class="input-field" id="password-field">
-              <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            </li>
-            <li class="input-field">
-              <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="password" name="confirm-password" id="confirm-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            </li>
-          </ul>
-          <div class="button-area">
-            <button type="submit" class="create-account-btn">
-              Create Account
-            </button>
-            <p class="login-text">
-              Already have an account? <a class="login-link">Log in</a>
-            </p>
-          </div>
-        </form>
-      </div>
     </div>
-  </div>
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

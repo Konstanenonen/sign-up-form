@@ -28,7 +28,9 @@ function checkPasswordMatch(event) {
 
   const inputFields = document.querySelectorAll("input");
 
-  inputFields.forEach(input => input.value = "");
+  inputFields.forEach((input) => (input.value = ""));
 }
 
-document.getElementById("account-form").addEventListener("submit", checkPasswordMatch);
+document
+  .getElementById("account-form")
+  .addEventListener("submit", checkPasswordMatch);
