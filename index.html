@@ -35,11 +35,11 @@
           <ul class="input-container">
             <li class="input-field">
               <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first-name" id="first-name" required>
+              <input type="text" name="first-name" id="first-name" required pattern="[a-zA-Z0-9]+">
             </li>
             <li class="input-field">
               <label for="last-name">LAST NAME</label>
-              <input type="text" name="last-name" id="last-name" required>
+              <input type="text" name="last-name" id="last-name" required pattern="[a-zA-Z0-9]+">
             </li>
             <li class="input-field">
               <label for="email">EMAIL</label>
@@ -47,15 +47,15 @@
             </li>
             <li class="input-field">
               <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" name="phone-number" id="phone-number" required>
+              <input type="tel" name="phone-number" id="phone-number" required pattern="^(?:0|\(?\+358\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
             </li>
             <li class="input-field" id="password-field">
               <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" required>
+              <input type="password" name="password" id="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             </li>
             <li class="input-field">
               <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="password" name="confirm-password" id="confirm-password" required>
+              <input type="password" name="confirm-password" id="confirm-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             </li>
           </ul>
           <div class="button-area">

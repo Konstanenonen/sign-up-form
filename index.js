@@ -2,7 +2,6 @@ function checkPasswordMatch(event) {
   event.preventDefault();
   const firstPassword = document.getElementById("password");
   const secondPassword = document.getElementById("confirm-password");
-  console.log(`first = ${firstPassword}, second = ${secondPassword}`);
 
   if (firstPassword.value !== secondPassword.value) {
     firstPassword.classList.add("error");
@@ -18,7 +17,12 @@ function checkPasswordMatch(event) {
   }
 
   const errorText = document.querySelector(".error-text");
-  document.getElementById("password-field").removeChild(errorText);
+  console.log(errorText);
+
+  if (errorText != null) {
+    document.getElementById("password-field").removeChild(errorText);
+  }
+
   firstPassword.classList.remove("error");
   secondPassword.classList.remove("error");
 
