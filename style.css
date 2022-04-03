@@ -53,7 +53,7 @@ table {
 
 @font-face {
   font-family: "Norse Bold";
-  src: url(./Norse-Bold.otf);
+  src: url(./fonts/Norse-Bold.otf);
 }
 
 * {
@@ -88,7 +88,7 @@ em {
   width: 35%;
   height: 100%;
   position: relative;
-  background-image: url(./forest.jpg);
+  background-image: url(./images/forest.jpg);
   background-size: cover;
   background-position: center;
 }
