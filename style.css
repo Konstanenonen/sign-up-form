@@ -49,6 +49,11 @@ table {
 
 /* End of the reset */
 
+@font-face {
+  font-family: "Norse Bold";
+  src: url(./Norse-Bold.otf);
+}
+
 * {
   box-sizing: border-box;
   border: solid 1px red;
@@ -57,11 +62,13 @@ table {
 :root {
   height: 100vh;
   width: 100vw;
+  font-size: 12px;
 }
 
 body {
   width: 100%;
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .root {
@@ -74,6 +81,9 @@ body {
   width: 35%;
   height: 100%;
   position: relative;
+  background-image: url(./forest.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .picture-area > .logo-area {
@@ -81,13 +91,35 @@ body {
   top: 20%;
   width: 100%;
   height: 150px;
+  background-color: rgba(0, 0, 0, 0.575);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.picture-area > .logo-area > .logo-title {
+  color: white;
+  font-size: 7rem;
+  font-family: "Norse Bold", sans-serif;
+}
+
+.picture-area > .logo-area > .logo-image {
+  max-height: 100%;
+  width: auto;
 }
 
 .picture-area > .photo-credit {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   text-align: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .form-area {
