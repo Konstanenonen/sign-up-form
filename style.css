@@ -154,7 +154,6 @@ em {
 }
 
 .form-area > .form {
-  height: 30%;
   background-color: white;
   padding: 20px 0 15px 40px;
   box-shadow: 0 5px 3px rgb(221, 219, 219);
@@ -163,6 +162,8 @@ em {
 .form-area > .form > form {
   height: 100%;
   width: 70%;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .form-area > .form > form > h2 {
@@ -206,16 +207,17 @@ em {
   box-shadow: 0 0 5px rgb(51, 50, 50);
 }
 
-.form-area > .form > form > .input-container > .input-field > input:invalid {
+.form-area > .form > form > .input-container > .input-field > input:focus:invalid {
   outline: solid 2px red;
   box-shadow: 0 0 5px rgb(51, 50, 50);
 }
 
-.form-area > .button-area {
-  height: 35%;
+.form-area > .form > form > .button-area {
+  position: absolute;
+  bottom: -175px;
 }
 
-.form-area > .button-area > .create-account-btn {
+.form-area > .form > form > .button-area > .create-account-btn {
   background-color: rgb(67, 136, 109);
   color: white;
   padding: 15px 50px;
@@ -227,12 +229,17 @@ em {
   box-shadow: 0 0 4px black;
 }
 
-.form-area > .button-area > .login-text {
+.form-area > .form > form > .button-area > .create-account-btn:hover {
+  cursor: pointer;
+  background-color: rgb(49, 93, 76);;
+}
+
+.form-area > .form > form > .button-area > .login-text {
   font-size: 1.5rem;
   margin-left: 40px;
 }
 
-.form-area > .button-area > .login-text > .login-link {
+.form-area > .form > form > .button-area > .login-text > .login-link {
   font-weight: bold;
   color: rgb(67, 136, 109);
 }
